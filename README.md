@@ -1,6 +1,8 @@
 # Project Title
 
+bc-freestyle-1
 
+Freestyle Hackathon Repository
 
 ## Using in your application
 
