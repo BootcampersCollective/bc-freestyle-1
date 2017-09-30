@@ -1,7 +1,9 @@
 import todolist from './todolist.js';
+import listings from './listings.js';
 
 const reducers = {
-  todolist
+  todolist,
+  listings
 }
 
 export default reducers;
