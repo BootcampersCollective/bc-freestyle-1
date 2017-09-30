@@ -2,12 +2,12 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Listing from '../components/Listing.js';
 import listingsJSON from '../db/data.json';
-import { updateListings } from '../actions/listingsActions.js';
+import { fetchListings } from '../actions/listingsActions.js';
 import './Listings.css';
 
-const Listings = ({listings, updateListings}) => {
+const Listings = ({listings, fetchListings}) => {
 
-  updateListings(listingsJSON.goods)
+  fetchListings(listingsJSON.goods)
 
   return(
     <div>LISTINGS
@@ -31,7 +31,7 @@ const mapStateToProps = store => ({
 
 const mapDispatchToProps = dispatch => {
   return {
-    updateListings: listings => dispatch(updateListings(listings))
+    fetchListings: listings => dispatch(fetchListings(listings))
   }
 }
 
