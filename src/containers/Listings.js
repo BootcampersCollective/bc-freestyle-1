@@ -12,11 +12,18 @@ const Listings = ({listings, fetchListings}) => {
   return(
     <div>LISTINGS
       <div>{listings.map((el, idx) => {
+        let postDateString = `${(new Date(el.postDate*1000)).toLocaleDateString()}`;
+        let detailRoute = `/listings/${el.id}`;
+        
         return(
           <Listing 
             key={idx}
             name={el.name}
+            desc={el.desc}
+            postDate={postDateString}
+            img={el.img}
             qty={el.qty}
+            detailRoute={detailRoute}
           />
         )
       })}</div>
