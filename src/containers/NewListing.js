@@ -4,7 +4,7 @@ import './NewListing.css';
 class NewListing extends Component {
 	constructor(props) {
 		super(props);
-		
+		this.handleSubmit = this.handleSubmit.bind(this);
 	}
 
 	handleSubmit(e){
@@ -16,12 +16,28 @@ class NewListing extends Component {
 	render() {
 		return (
 		<div className="newListingForm">
-			<form>
+			<h1>Add New Food Item</h1>
+			<form onSubmit={this.handleSubmit}>
 				<input type="text" name="name" placeholder="Listing Title" required />
+				
+				<input type="text" name="location" placeholder="Location" />
+
 				<label for="desc">Description:</label>
 				<textarea id="desc" name="desc"></textarea>
+				
+				<label for="qty">How Many:</label>
+				<input type="number" name="qty" id="qty" />
 
-				<input onSubmit={this.handleSubmit.bind(this)} type="submit" value="submit" />
+				<label for="imageUrl">Image Url:</label>
+				<input type="text" name="img" id="imageUrl" />
+				
+				<label for="timeAvail">Time available:</label>
+				<input type="time" name="available" />
+				
+				<label for="contactEmail">Contact Email Adress:</label>
+				<input type="email" id="contactEmail" name="email" />
+				
+				<input type="submit" value="POST" />
 			</form>
 		</div>
 		)
