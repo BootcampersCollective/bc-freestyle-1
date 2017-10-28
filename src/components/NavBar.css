@@ -1,6 +1,10 @@
 .navbar {
     display: flex;
-    flex-direction: column;
-    margin: 10px 0;
-    box-shadow: 2px 2px 5px #222;
+    flex-direction: row;
+    margin: 10px o 0 0;
+    justify-content: center;
+  }
+
+  .navbar-item {
+      margin: 10px 10px 10px 0;
   }

@@ -11,7 +11,7 @@ const NavBar = props => (
             <Link to="/listings">Listings</Link>
         </div>
         <div className="navbar-item">
-            <Link to="/newlisting">New Listing</Link>
+            <Link to="/listings/newlisting">New Listing</Link>
         </div>
         <div className="login">
         </div>
