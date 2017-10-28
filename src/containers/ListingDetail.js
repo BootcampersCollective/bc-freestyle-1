@@ -20,7 +20,6 @@ const ListingDetail = props => {
     let available = "23:00";
     let email = "nec.enim.Nunc@ultricies.org";
 
-
     return(
         <div className="detail-container"> 
             <header>             

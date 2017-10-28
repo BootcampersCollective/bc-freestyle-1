@@ -6,8 +6,7 @@ const Home = props => (
   <div className="home-container">
     <div>HOME</div>
     <Link to="/listings">Listings</Link>
-    <Link to="/todolist">TodoList</Link>
-    <Link to="/about">About</Link>
+    <Link to="/newlisting">New Listing</Link>
   </div>
 )
 
