@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
 import _reducers from './reducers';
 import thunk from 'redux-thunk';
+import logger from 'redux-logger';
 
 import { ConnectedRouter, routerReducer, routerMiddleware } from 'react-router-redux';
 import createHistory from 'history/createBrowserHistory'; //Add in switch to read env and use either browser or memory history with SSR
@@ -18,7 +19,8 @@ const store = createStore(
   }), 
   applyMiddleware(
     historyMiddleware,
-    thunk
+    thunk,
+    logger
   )
 )
 
